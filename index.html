@@ -1,0 +1,2647 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Logos Freji/Icono-Pestaña2.png">
+    <title>FREJI TRANSPORTACION ESPECIALIZADA</title>
+
+    <style>/* ----------------------Estilo de pagina pies a cabeza -----------------------------*/
+     body {
+    background-color: #fffefe59;   /* Fondo blanco semi-transparente. */
+    font-family: Arial, sans-serif; /* Fuente de letra para toda la página. */
+    margin: 0;                      /* Quita márgenes por defecto. */
+    padding: 0;                     /* Quita relleno por defecto. */
+    box-sizing: border-box;         /* Incluye el borde y el padding en el tamaño total de los elementos. */
+}
+      
+      /* Tamaño que abarca la barra de redes sociales , numero , horario y correo */
+      header {
+          width: 100%;
+      }
+     /* Barra superior (correo, número, horario) */
+
+.top-bar {
+    position: fixed;             /* Fija la barra en la parte superior de la pantalla, incluso al hacer scroll. */
+    top: 0;                      /* La ubica en la parte más alta de la ventana. */
+    left: 0;                     /* La alinea al lado izquierdo de la pantalla. */
+    width: 100%;                 /* La barra ocupa todo el ancho disponible. */
+    z-index: 1100;               /* Se asegura que esté por encima de otros elementos. */
+    display: flex;               /* Usa Flexbox para organizar el contenido en una fila. */
+    justify-content: center;     /* Centra los elementos hijos horizontalmente dentro de la barra. */
+    align-items: center;         /* Centra los elementos hijos verticalmente dentro de la barra. */
+    padding: 9px 18px;           /* Añade espacio interno arriba/abajo (9px) y a los lados (18px). */
+    box-sizing: border-box;      /* Incluye el padding y el borde dentro del ancho total de la barra. */
+    background-color: #f5f5f5;   /* Color de fondo gris muy claro para la barra. */
+    font-size: 14px;             /* Tamaño del texto dentro de la barra. */
+    color: #494747;              /* Color del texto, gris oscuro. */
+    border-bottom: 2px solid #ccc; /* Línea inferior gris para separar la barra del contenido. */
+    white-space: nowrap;         /* El texto no se divide en varias líneas, se mantiene en una sola línea. */
+    overflow: hidden;            /* Oculta cualquier contenido que se salga del espacio de la barra. */
+    text-overflow: ellipsis;     /* Si el texto es demasiado largo, muestra '...' al final. */
+}
+
+
+
+/* ----------------------------elementos de la barra----------------------------------------------- */
+
+.top-bar span {
+    padding: 0 9px;            /* Espaciado horizontal entre texto y línea. */
+    position: relative;        /* Necesario para que la línea vertical se posicione respecto despues de cada texto. */
+}
+
+/* Línea vertical entre los elementos, menos el último */
+.top-bar span:not(:last-child)::after {
+    content: "";                /* Crea la línea. */
+    position: absolute;         /* Coloca la línea al lado derecho del texto. */
+    right: 0;
+    top: 0;
+    height: 100%;               /* Ocupa toda la altura del span. */
+    width: 1.6px;               /* Grosor de la línea. */
+    background-color: #ccc;     /* Color de la línea. */
+}
+
+
+
+
+
+/*----------------------------- Parte de los iconos de las redes sociales Facebook, Instagram , Tiktok --------------------------*/
+.social-icons {
+    display: flex; /* Organiza los íconos en fila. */
+    gap: 10px; /* Espaciado entre los íconos. */
+    margin-left: auto; /* Lleva los íconos al extremo derecho. */
+}
+
+.social-icons {
+    display: flex;           /* Coloca los íconos en una fila. */
+    gap: 10px;               /* Espacio entre íconos. */
+    margin-left: auto;       /* Empuja los íconos al extremo derecho. */
+}
+
+.social-icons a {
+    display: inline-flex;    /* Alinea y centra cada ícono dentro de su caja. */
+    align-items: center;
+    justify-content: center;
+    width: 24px;             /* Tamaño cuadrado para cada ícono. */
+    height: 24px;
+    text-decoration: none;   /* Quita el subrayado de los enlaces. */
+}
+
+.social-icons img {
+    width: 24px; /*ancho del icono*/
+    height: 24px; /*Alto del icono*/
+    transition: opacity 0.3s; /* Hace suave el cambio de opacidad. */
+}
+
+.social-icons a:hover img {
+    opacity: 0.7;           /* Hace el ícono más transparente al pasar el mouse. */
+}
+
+
+
+/*--------------------------- Barra de navegación Con logo FREJI / Secciones  INICIO, NOSOTROS, BOLSA DE TRABAJO, ETC------------------------------- */
+.navbar {
+  
+    position: fixed; /* Posiciona la barra de navegación de forma fija, permanece visible al hacer scroll. */
+    top: 42px; /* Se sitúa 42px debajo de la parte superior de la ventana. */
+    left: 0; /* Alinea la barra al borde izquierdo de la ventana. */
+    width: 100%; /* Ocupa todo el ancho de la ventana. */
+    z-index: 1000; /* Define la prioridad de superposición. */
+    display: flex; /* Utiliza un contenedor flexible para organizar elementos. */
+    align-items: center; /* Alinea verticalmente los elementos. */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos. */
+    padding: 10px 20px; /* Añade espacio interno de 10px arriba/abajo y 20px izquierda/derecha. */
+    height: auto; /* Define la altura total de la barra de navegación. */
+    background: rgb(33,62,154); /* Fondo azul de la barra */
+    border-bottom: 1.5px solid #ccc; /* Línea inferior como borde, gris claro. */
+    box-sizing: border-box; /* Asegura que el padding y el borde no aumenten el tamaño total. */
+    overflow: hidden; /* Evita el desbordamiento horizontal del contenido. */
+}
+
+/* Logotipo */
+.logo-img1 {
+    max-height: 51px; /* Ajusta el tamaño máximo del logotipo para evitar desbordamientos. */
+}
+
+/* Menú de navegación */
+.nav-links {
+    display: flex; /* Organiza los enlaces en una fila. */
+    list-style: none; /* Elimina los estilos de lista predeterminados. */
+    margin: 0; /* Elimina el margen exterior. */
+    padding: 0; /* Elimina el padding interno. */
+    justify-content: right; /* Alinea los enlaces hacia la derecha. */
+    overflow: hidden; /* Asegura que el contenido adicional no se salga. */
+}
+
+.nav-links li {
+    margin: 0 14px; /* Espaciado horizontal entre los elementos de la lista. */
+}
+
+
+/* Logotipo */
+.logo1 {
+    flex: 2; /* Asegura que el logotipo ocupe más espacio a la izquierda. */
+}
+
+.nav-links a {
+  font-family:sans-serif;
+    text-decoration: none; /* Elimina el subrayado de los enlaces. */
+    color: #fffefe; /* Define el color del texto como negro. */
+    font-size: 14px; /* Tamaño de fuente de los enlaces. */
+    font-weight: bold; /* Aplica un peso de fuente en negrita. */
+}
+
+.nav-links .dropdown {
+    display: none; /* Oculta el menú desplegable por defecto. */
+    position: absolute; /* Posiciona el menú relativo al elemento padre. */
+    top: 100%; /* Sitúa el menú justo debajo del elemento padre. */
+    left: 0; /* Alinea el menú desplegable al borde izquierdo del elemento padre. */
+    background: white; /* Define el color de fondo como blanco. */
+    list-style: none; /* Elimina los estilos de lista predeterminados. */
+    padding: 10px 0; /* Añade espacio interno superior e inferior. */
+    margin: 0; /* Elimina márgenes exteriores. */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aplica una sombra para dar efecto de elevación. */
+}
+.hamburger-menu{
+    display: none; /* se encuentra en none debido a que en tamaño de pantalla normal 1920 no es necesario el menu de hamburguesa desplegable */ 
+}
+
+
+      /* ----------------------Contenedor principal Donde esta el video completo------------ */
+  .video-container {
+    position: absolute;   /* El contenedor se posiciona absolutamente respecto a su primer padre con posición relativa. */
+    top: 0;               /* Lo coloca en la parte superior del elemento padre. */
+    left: 0;              /* Lo alinea al borde izquierdo del elemento padre. */
+    width: 75%;           /* Ocupa el 75% del ancho del elemento padre. */
+    height: 90%;          /* Ocupa el 90% de la altura del elemento padre. */
+    z-index: -1;          /* Queda detrás de otros elementos con z-index mayor (útil para fondos de video). */
+}
+
+
+ /* Video de fondo */
+.video__background {
+    position: absolute;   /* El video se posiciona absolutamente dentro de .video-container. */
+    top: 0;               /* Comienza desde la parte superior del contenedor. */
+    left: 0;              /* Se pega al lado izquierdo del contenedor. */
+    width: 100%;          /* El video ocupará todo el ancho del contenedor padre (.video-container). */
+    height: 100%;         /* El video ocupará toda la altura del contenedor padre. */
+    object-fit: cover;    /* El video se escala para cubrir todo el área sin deformarse; puede recortarse si la proporción no es igual. */
+    z-index: -1;          /* El video está por debajo de cualquier otro contenido sobre el contenedor (para que otros elementos lo tapen). */
+}
+
+  /* Eliminar márgenes y padding predeterminados del navegador */
+body, html {
+    margin: 0;            /* Quita los márgenes externos por defecto. */
+    padding: 0;           /* Quita el espacio interior por defecto. */
+    overflow-x: hidden;   /* Impide que aparezca el scroll horizontal si algo se sale a lo ancho. */
+}
+ 
+
+
+
+/* ===== --------------------Texto encima del video------------------  ===== */
+ .cover-section {
+  position: relative; /* Permite posicionar elementos hijos de manera absoluta dentro de este contenedor */
+  width: 100vw;       /* Ocupa el 100% del ancho de la ventana del navegador (viewport width) */
+  height: 100vh;      /* Ocupa el 100% de la altura de la ventana (viewport height) */
+  min-height: 400px;  /* Establece una altura mínima para pantallas muy chicas */
+  overflow: hidden;   /* Oculta cualquier contenido que se salga del área del contenedor */
+  display: flex;      /* Usa Flexbox para organizar el contenido dentro de la sección */
+  align-items: flex-end; /* Alinea los elementos hijos en la parte de abajo (puedes cambiar a center si quieres centrar verticalmente) */
+  justify-content: center; /* Centra los hijos horizontalmente */
+  background: linear-gradient(95deg, #233e9a 44%, #344bbf 97%); /* Fondo degradado azul para caso de que el video no cargue */
+}
+.cover-section video {
+  width: 100vw;         /* El video ocupa todo el ancho de la pantalla */
+  height: 100vh;        /* El video ocupa toda la altura de la ventana */
+  object-fit: cover;    /* El video mantiene su proporción y cubre todo el área del contenedor, recortando lo que sobra */
+  position: absolute;   /* Permite colocar el video encima del fondo pero debajo del contenido y overlay */
+  z-index: 0;           /* El video queda por detrás del overlay y el contenido textual */
+  left: 0;              /* Lo ubica en la esquina superior izquierda del contenedor */
+  top: 0;               /* Lo ubica en la parte superior */
+  filter: brightness(0.82) contrast(1.15); /* Oscurece un poco el video y aumenta el contraste para que el texto sea más legible encima */
+}
+    .cover-overlay {
+      position: absolute; width: 100%; height: 100%; z-index: 1;
+      background: linear-gradient(80deg, #202f618c 34%, #344bbf00 80%);
+    }
+   .cover-content {
+  position: relative; z-index: 2; text-align: center; color: white;
+  width: 100%; padding: 22px 0 42px 0; /* padding-bottom aumentado */
+}
+    .cover-content h1 { font-size: 2.2rem; font-weight: 800; letter-spacing: .03em; margin: 0 0 14px 0;}
+    .cover-content p { font-size: 1.16rem; font-weight: 500; margin-bottom: 8px;}
+    @media (max-width: 700px) {
+      .cover-section { height: 59vw; min-height: 150px; }
+      .cover-content h1 { height: 40px; font-size: 1.0rem;}
+      .cover-content p {height: 0px;  font-size: 0.90rem;}
+    }
+
+
+
+     /*------------------- boton fijo whatsapp----------------------*/
+
+    .Calltoaction {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  z-index: 9999;
+  background: #25d366;
+  border-radius: 50%;
+  padding: 8px;
+  box-shadow: 0 4px 18px rgba(33, 62, 154, 0.19);
+  transition: transform 0.15s, box-shadow 0.15s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 1.3s infinite;
+}
+
+.Calltoaction img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+.Calltoaction:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 28px rgba(33, 62, 154, 0.25);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 #25d36688; }
+  70% { box-shadow: 0 0 0 8px #25d36600; }
+  100% { box-shadow: 0 0 0 0 #25d36600; }
+}
+
+
+   /* -------------------Contenedor de FREJI y su inicio (NOSOTROS )---------------------------------------*/
+
+
+ 
+.acercadenosotros {
+    max-width: 1200px;        /* El ancho máximo del contenedor será de 1200px */
+    margin: 50px auto;        /* 50px de espacio arriba y abajo, centrado horizontalmente */
+    padding: 20px;            /* 20px de espacio interno alrededor de todo el contenedor */
+}
+
+/* Contenedor flexible con separación entre textos */
+.acercadenosotros-container {
+    display: flex;            /* Usa Flexbox para acomodar los hijos en una fila */
+    justify-content: space-between; /* Deja espacio entre los elementos hijos (izquierda y derecha) */
+    align-items: center;      /* Centra verticalmente los hijos */
+    gap: 40px;                /* Deja 40px de separación entre los elementos hijos */
+    
+}
+
+/* Estilos para la parte izquierda */
+.acercadenosotros-left {
+    flex: 1;                  /* Ocupa el mismo espacio que la parte derecha */
+    max-width: 45%;           /* No se expande más allá del 45% del contenedor */
+    text-align: left;         /* Alinea el texto a la izquierda */
+}
+
+/* TEXTO QUIENES SOMOS EN GRANDE */
+.acercadenosotros-big-number {
+    font-size: 2em;           /* Tamaño de fuente grande para destacar */
+    font-weight: bold;        /* Texto en negritas */
+    color: #000;              /* Color negro */
+    display: block;           /* Se muestra como bloque para ocupar toda la línea */
+}
+
+/* Texto debajo del número */
+.acercadenosotros-years {
+    font-size: 1.2em;                     /* Un poco más grande que el texto normal */
+    color: rgba(33, 62, 154, 255);        /* Azul fuerte */
+    line-height: 1.5;                     /* Espaciado entre líneas */
+}
+
+/* animacion de fundido de texto y de ¿Quienes somos? */
+.acercadenosotros-container {
+  opacity: 0;                     /* Empieza invisible */
+  transform: translateX(-80px);    /* Desplazada hacia abajo */
+  transition: opacity 0.8s cubic-bezier(.22,1,.36,1), transform 1.6s cubic-bezier(.22,1,.36,1);
+}
+
+.acercadenosotros-container.active {
+  opacity: 1;                     /* Se vuelve visible */
+  transform: translateX(0);       /* Vuelve a su posición normal */
+}
+
+
+/* Línea divisoria azul */
+.acercadenosotros-divider {
+    width: 2px;                                    /* 2px de ancho */
+    background-color: rgba(33, 62, 154, 255);      /* Color azul */
+    height: 180px;                                 /* 100px de alto (ajustable) */
+    align-self: center;                            /* Centra la línea verticalmente respecto a sus vecinos */
+}
+
+/* Estilos para la parte derecha */
+.acercadenosotros-right {
+    flex: 1;              /* Ocupa el mismo espacio que la parte izquierda */
+    max-width: 45%;       /* No se expande más allá del 45% del contenedor */
+    text-align: right;    /* Alinea el texto a la derecha */
+}
+
+/* Texto de compromiso */
+.acercadenosotros-commitment {
+    color: black;         /* Texto negro */
+    font-size: 1.8em;     /* Tamaño grande para destacar */
+    font-weight: 400;     /* Peso regular (ni muy delgado ni muy grueso) */
+}
+
+/* Negrita dentro del compromiso */
+.acercadenosotros-commitment strong {
+    font-weight: bold;    /* Aplica negrita solo al texto dentro de <strong> */
+}
+/*-------------------------Responsivo de acerca de nosotros-----------------------------------------------------------------------*/
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .acercadenosotros-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .acercadenosotros-left, 
+    .acercadenosotros-divider, 
+    .acercadenosotros-right {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .acercadenosotros-divider {
+        width: 50%;
+        height: 2px; /* Línea horizontal en móviles */
+    }
+  }
+  /*------------------------------------------------------------------*/
+
+
+
+/*----------------------------------------- Certificaciones ------------------------------------------------*/ 
+
+.minimal-certs-section {
+  background: #fff;                 /* Fondo blanco para la sección */
+  padding: 48px 16px;               /* Espaciado interior: 48px arriba/abajo, 16px a los lados */
+  border-radius: 18px;              /* Esquinas redondeadas de 18px */
+  max-width: 1100px;                /* Ancho máximo de la sección, no crece más que esto */
+  margin: 48px auto 0 auto;         /* 48px arriba, centrado horizontalmente, sin margen abajo */
+  border: 1px solid #e5e7eb;        /* Borde sutil gris claro */
+}
+
+
+.minimal-certs-title {
+  font-size: 2rem;                  /* Tamaño de fuente grande para el título */
+  font-weight: 700;                 /* Texto en negritas (peso 700) */
+  color: #253048;                   /* Color azul oscuro para el título */
+  text-align: center;               /* Centra el texto del título */
+  margin-bottom: 40px;              /* Espacio de 40px debajo del título */
+  letter-spacing: 0.5px;            /* Espaciado entre letras ligeramente mayor */
+}
+
+
+.minimal-certs-cards {
+  display: flex;                    /* Usa Flexbox para organizar las tarjetas en una fila */
+  flex-direction: row;              /* Organiza las tarjetas horizontalmente */
+  justify-content: center;          /* Centra las tarjetas dentro de la fila */
+  gap: 40px;                        /* Deja 40px de espacio entre cada tarjeta */
+}
+
+
+.minimal-cert-card {
+  background: transparent;          /* Fondo transparente para las tarjetas individuales */
+  border: 1.5px solid #e5e7eb;      /* Borde sutil gris claro de 1.5px */
+  border-radius: 14px;              /* Esquinas redondeadas de 14px */
+  padding: 30px 25px 24px 25px;     /* Espacio interno: 30px arriba, 20px lados, 24px abajo */
+  display: flex;                    /* Usa Flexbox dentro de la tarjeta */
+  flex-direction: column;           /* Los elementos se apilan verticalmente */
+  align-items: center;              /* Centra el contenido horizontalmente dentro de la tarjeta */
+  min-width: 180px;                 /* Ancho mínimo de la tarjeta */
+  max-width: 250px;                 /* Ancho máximo de la tarjeta */
+  transition: border-color 0.2s;    /* Suaviza el cambio de color del borde al interactuar */
+}
+
+
+.minimal-cert-card img {
+  width: 200px;                     /* Ancho fijo para la imagen del logo */
+  height: 150px;                    /* Alto fijo para la imagen del logo */
+  object-fit: contain;              /* Escala la imagen sin recortar ni deformar */
+  margin-bottom: 20px;              /* Espacio de 20px debajo de la imagen */
+}
+
+
+.minimal-cert-card h3 {
+  font-size: 1.08rem;               /* Tamaño de fuente para el nombre de la certificación */
+  color: #89898a;                   /* Color azul oscuro */
+  font-weight: 600;                 /* Negrita ligera */
+  margin: 0 0 4px 0;                /* Sin margen arriba, 4px debajo */
+  text-align: center;               /* Centra el texto */
+  letter-spacing: 0.8px;            /* Espaciado entre letras */
+}
+
+
+.minimal-cert-card p {
+  font-size: 0.97rem;               /* Tamaño de fuente un poco menor para la descripción */
+  color: #727b90;                   /* Color gris azulado suave */
+  margin: 0;                        /* Sin márgenes */
+  text-align: center;               /* Centra el texto */
+}
+
+
+/*-------------------------- RESPONSIVO de certficaciones---------------- */
+@media (max-width: 750px) {
+  .minimal-certs-cards {
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+  }
+  .minimal-cert-card {
+    width: 92vw;
+    max-width: 340px;
+  }
+  .minimal-certs-section {
+    padding: 32px 4vw;
+  }
+  .minimal-certs-title {
+    font-size: 1.23rem;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* -----------------------------------Estilo del footer--------------- */
+
+.containerf {
+  max-width: 1200px;    /* El ancho máximo del contenedor del footer es 1200px */
+  margin: auto;         /* Centra el footer horizontalmente en la página */
+  height: auto;         /* La altura se ajusta automáticamente al contenido */
+}
+
+.row {
+  display: flex;        /* Usa Flexbox para organizar los hijos en una fila */
+  flex-wrap: wrap;      /* Permite que los hijos bajen a otra línea si no caben */
+}
+
+
+ul {
+  list-style: none;     /* Elimina los puntos o números de las listas */
+  padding: 0;           /* Quita el relleno interior predeterminado */
+  margin: 0;            /* Quita el margen exterior predeterminado */
+}
+
+
+.footer {
+  background-color: #24262b; /* Fondo oscuro para el footer */
+  padding: 60px 0;           /* 60px de espacio arriba y abajo, nada a los lados */
+}
+
+
+.social-links {
+  display: flex;             /* Coloca los íconos de redes sociales en una fila */
+  justify-content: left;     /* Los íconos se alinean a la izquierda */
+  gap: 20px;                 /* Espacio de 20px entre íconos */
+  margin-top: 20px;          /* Espacio de 20px arriba del grupo de íconos */
+}
+
+
+.social-links img {
+  width: 40px;               /* Cada ícono de red social tiene 40px de ancho */
+  height: 40px;              /* Cada ícono tiene 40px de alto */
+  object-fit: contain;       /* El ícono se ajusta sin deformarse */
+}
+
+
+.social-links a {
+  text-decoration: none;     /* Quita el subrayado de los enlaces */
+}
+
+
+.social-links img:hover {
+  transform: scale(1.1);     /* Hace un ligero zoom cuando pasas el mouse */
+  transition: transform 0.3s;/* La transición del zoom es suave, dura 0.3s */
+}
+
+
+
+
+.footer-col {                 /* Estilos para cada columna del footer */
+  width: 30%;                /* Cada columna ocupa el 30% del ancho del contenedor padre */
+  padding: 0 15px;           /* Espaciado de 15px a los lados internos de cada columna */
+}
+
+
+.footer-col h4 {              /* Encabezados de las columnas del footer */
+  font-size: 18px;            /* Tamaño de letra grande */
+  color: #f9f9ff;             /* Color blanco muy claro */
+  text-transform: capitalize; /* Primera letra de cada palabra en mayúscula */
+  margin-bottom: 35px;        /* Espacio debajo del título */
+  font-weight: 500;           /* Negrita media */
+  position: relative;         /* Necesario para posicionar el ::before */
+  padding: 2px;
+}
+
+
+.footer-col h4::before {      /* Línea decorativa bajo cada título del footer */
+  content: '';                /* No muestra texto, solo la línea */
+  position: absolute;         /* Se posiciona absolutamente dentro del h4 */
+  left: 0;                    /* Inicia en el borde izquierdo del h4 */
+  bottom: -7px;              /* 10px debajo de la parte baja del h4 */
+  background-color: #0202f5;  /* Azul fuerte */
+  height: 2px;                /* 2px de alto (grueso de la línea) */
+  box-sizing: border-box;     /* El tamaño de la línea incluye el borde */
+  width: 78px;                /* Largo de la línea */
+}
+
+
+.footer-col ul li:not(:last-child) {
+  margin-bottom: 10px;        /* Espacio entre los elementos de la lista excepto el último */
+}
+
+
+.footer-col ul li a {
+  font-size: 16px;            /* Tamaño de fuente medio */
+  text-transform: capitalize; /* Primera letra de cada palabra en mayúscula */
+  color: #c9c7c7;             /* Color gris claro para los enlaces */
+  text-decoration: none;      /* Quita subrayado */
+  font-weight: 300;           /* Texto fino */
+  display: block;             /* Los enlaces ocupan toda la línea */
+  transition: all 0.3s ease;  /* Cualquier cambio de estilo será suave */
+}
+
+
+.footer-col ul li a:hover {
+  color: #ffffff;             /* Al pasar el mouse, el texto se vuelve blanco */
+  padding-left: 8px;          /* El texto se desplaza ligeramente a la derecha */
+}
+
+
+.footer-col .social-links a {
+  display: inline-block;      /* Los enlaces de redes son cajas en línea */
+  height: 49px;               /* Altura del contenedor del ícono */
+  width: 49px;                /* Ancho del contenedor del ícono */
+  margin: 0 10px 10px 0;      /* Espaciado alrededor de los íconos */
+  text-align: center;         /* Centra el ícono horizontalmente */
+  line-height: 40px;          /* Centra el ícono verticalmente */
+  border-radius: 30%;         /* Bordes redondeados */
+  color: #ffffff;             /* Color de ícono/texto blanco */
+  transition: all 0.5s ease;  /* Transiciones suaves en todos los cambios */
+}
+
+
+.footer-col .social-links a:hover {
+  color: #24262b;             /* Al pasar el mouse, el ícono se vuelve oscuro */
+  background-color: #585858;  /* Fondo claro al hacer hover */
+}
+
+
+
+
+
+/*---------------------------------- bloques de mision y vision ------------------------*/
+.about-bg {
+  /* Fondo decorativo si lo usas */
+}
+
+.about-block {
+  padding: 36px 0;                   /* Espacio arriba y abajo */
+  background: #fff;                   /* Fondo blanco */
+}
+
+.about-row {
+  display: flex;                      /* Contenido en fila */
+  align-items: center;                /* Centrado vertical */
+  gap: 40px;                          /* Espacio entre imagen y texto */
+  max-width: 1080px;                  /* Ancho máximo del bloque */
+  margin: 0 auto;                     /* Centra horizontalmente */
+  padding: 18px 18px;                 /* Espaciado interno */
+  border-radius: 22px;                /* Esquinas redondeadas */
+  background: #f6f7fa9f;                /* Fondo gris muy claro */
+  box-shadow: 0 8px 36px rgba(41, 41, 41, 0.247); /* Sombra sutil */
+  opacity: 0;                         /* Empieza invisible (para animación) */
+  transform: translateY(30px);        /* Un poco hacia abajo (para animación) */
+  transition: opacity 0.8s, transform 0.8s; /* Transiciones suaves */
+}
+
+.about-row.fade-in {
+  opacity: 1;                         /* Hace visible */
+  transform: translateY(0);           /* En su lugar final */
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;        /* Invierte imagen y texto */
+}
+
+.about-img img {
+  width: 320px;                       /* Tamaño fijo imagen */
+  max-width: 98vw;                    /* Nunca más grande que el viewport */
+  border-radius: 22px;                /* Esquinas redondeadas */
+  box-shadow: 0 4px 18px rgba(33,62,154,0.11); /* Sombra ligera */
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 1s, transform 1s;
+}
+.about-row.fade-in .about-img img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.about-text h2, .about-text p {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.about-row.fade-in .about-text h2 {
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+.about-row.fade-in .about-text p {
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+
+
+
+
+/* .-------------------------Contenedor de Valores------------------------ */
+
+
+
+ /* diseño de acerca de nuestros valores */ 
+.valores-header {
+  text-align: center;               /* Centra el texto del encabezado */
+  margin-bottom: 34px;              /* Espacio debajo del encabezado */
+  max-width: 700px;                 /* Ancho máximo del encabezado */
+  margin-left: auto;                /* Centrado horizontal horizontalmente */
+  margin-right: auto;               /* Centrado horizontal horizontalmente */
+  padding: 0 16px;                  /* Padding lateral para evitar que el texto toque el borde */
+}
+
+.valores-header h2 {
+  font-size: 2rem;                  /* Tamaño grande para el título */
+  font-weight: 800;                 /* Negrita fuerte */
+  color: #233e9a;                   /* Azul fuerte */
+  margin-bottom: 8px;               /* Espacio debajo del título */
+  letter-spacing: -1px;             /* Espaciado entre letras negativo */
+  position: relative;               /* Necesario para el pseudo-elemento ::after */
+  display: inline-block;            /* Solo ocupa el espacio del contenido */
+  background: linear-gradient(90deg, #233e9a, #344bbf); /* Gradiente de azul solo para fondo de texto */
+  -webkit-background-clip: text;    /* Clip del fondo al texto (efecto solo en webkit/chrome) */
+  -webkit-text-fill-color: transparent; /* Hace transparente el texto para ver el gradiente */
+}
+
+.valores-header h2::after {
+  content: '';                      /* Crea un pseudo-elemento vacío */
+  display: block;                   /* Lo convierte en bloque para ocupar espacio */
+  width: 60%;                       /* Ancho del subrayado */
+  height: 4px;                      /* Altura del subrayado */
+  margin: 10px auto 0 auto;         /* Centrado horizontal y margen arriba */
+  border-radius: 2px;               /* Bordes redondeados */
+  background: linear-gradient(90deg, #233e9a 20%, #344bbf 100%); /* Gradiente azul suave */
+  opacity: 0.15;                    /* Hace el subrayado semitransparente */
+}
+
+.valores-header p {
+  color: #3a3a48;                   /* Gris oscuro para el texto descriptivo */
+  font-size: 1.05rem;               /* Tamaño del texto descriptivo */
+  font-weight: 400;                 /* Peso regular */
+  margin-top: 0;                    /* Sin margen arriba */
+  margin-bottom: 0;                 /* Sin margen abajo */
+}
+
+.valores-header p span {
+  font-weight: 700;                 /* Texto destacado en negritas */
+  color: #344bbf;                   /* Azul para el texto destacado */
+}
+
+/* Sección de valores (cards flotantes) */
+.valores-section {
+  padding: 55px 0 40px 0;           /* Espaciado arriba, abajo y cero a los lados */
+  background: #fff;                 /* Fondo blanco */
+  width: 100%;                      /* Ocupa todo el ancho posible */
+  max-width: 1270px;                /* Ancho máximo de la sección */
+  margin: 0 auto;                   /* Centrado horizontal */
+  box-sizing: border-box;           /* El padding se incluye en el tamaño total */
+}
+
+.card-container {
+  display: flex;                    /* Flexbox para colocar cards en fila */
+  gap: 24px;                        /* Espacio horizontal entre cards */
+  overflow-x: auto;                 /* Permite hacer scroll horizontal si hay muchas cards */
+  padding: 10px 0 10px 16px;        /* Padding arriba, abajo y a la izquierda */
+  scroll-behavior: smooth;          /* Hace el scroll suave */
+  scrollbar-width: none;            /* Oculta scrollbar en Firefox */
+  -ms-overflow-style: none;         /* Oculta scrollbar en IE */
+}
+.card-container::-webkit-scrollbar {
+  display: none;                    /* Oculta scrollbar en Chrome y Safari */
+}
+
+/* CARD MEJORADA (Botón negro) */
+.card {
+  background: #eeecec;                 /* Fondo negro sólido */
+  color: #444444;                      /* Texto blanco */
+  padding: 12px 26px;               /* Espaciado interior, más padding para efecto botón */
+  border-radius: 1.7rem;              /* Esquinas súper redondeadas tipo píldora */
+  width: 60px;                 /* Ancho mínimo más grande */
+  font-size: 0.85rem;               /* Fuente ligeramente más grande */
+  white-space: nowrap;              /* No permite saltos de línea */
+  font-weight: 300;                 /* Texto más grueso */
+  display: inline-flex;             /* Flex para centrar vertical y horizontal */
+  align-items: center;              /* Centrado vertical */
+  justify-content: center;          /* Centrado horizontal */
+  flex-shrink: 0;                   /* No permite que se encoja */
+  height: 28px;                     /* Altura uniforme */
+  box-shadow: 0 3px 14px rgba(44,44,44,0.07), 0 1.5px 4px rgba(0,0,0,0.12); /* Sombras suaves */
+  transition: 
+    background 0.22s, 
+    color 0.18s, 
+    transform 0.2s, 
+    box-shadow 0.2s;                /* Transiciones suaves para interacción */
+  cursor: pointer;                  /* Cursor tipo botón */
+  border: 2px solid #222;           /* Borde negro más marcado */
+
+  /* Animación secuencial al aparecer */
+  opacity: 0;                       /* Inicialmente invisible */
+  transform: translateY(30px) scale(0.95);  /* Desplazado hacia abajo y un poco pequeño */
+  animation: aparecerCard 0.7s cubic-bezier(.21,.68,.42,1.01) forwards; /* Animación entrada */
+}
+
+/* Animación secuencial para cada card (ajusta si tienes más/menos valores) */
+.card:nth-child(1) { animation-delay: 0s; }
+.card:nth-child(2) { animation-delay: 1s; }
+.card:nth-child(3) { animation-delay: 2s; }
+.card:nth-child(4) { animation-delay: 3s; }
+.card:nth-child(5) { animation-delay: 4s; }
+.card:nth-child(6) { animation-delay: 5s; }
+.card:nth-child(7) { animation-delay: 6s; }
+.card:nth-child(8) { animation-delay: 7s; }
+.card:nth-child(9) { animation-delay: 8s; }
+
+@keyframes aparecerCard {
+  to {
+    opacity: 1;                     /* Hace la card visible */
+    transform: translateY(0) scale(1); /* Vuelve a su posición original y tamaño normal */
+  }
+}
+
+.card:hover {
+  background: #fff;                 /* Fondo blanco al hacer hover */
+  color: #111;                      /* Texto negro */
+  border: 2px solid #233e9a;        /* Borde azul al hacer hover */
+  transform: scale(1.07) translateY(-3px); /* Crece y sube un poco */
+  box-shadow: 0 6px 22px rgba(33,62,154,0.16), 0 3px 8px rgba(0,0,0,0.13); /* Sombra más marcada */
+}
+
+
+/* Responsividad para pantallas medianas */
+@media (max-width: 992px) {
+  .valores-section {
+    padding: 28px 0;
+  }
+  .card-container {
+    gap: 16px;
+    padding: 8px 0 8px 10px;
+  }
+  .card {
+    padding: 8px 18px;
+    min-width: 120px;
+    font-size: 0.92rem;
+    height: 38px;
+  }
+}
+
+/* Móvil */
+@media (max-width: 600px) {
+  .valores-section {
+    padding: 14px 0;
+  }
+  .card-container {
+    gap: 10px;
+    padding-left: 4px;
+  }
+  .card {
+    font-size: 0.78rem;
+    padding: 6px 14px;
+    min-width: 98px;
+    height: 32px;
+    border-radius: 1.1rem;
+  }
+}
+
+
+
+
+/*------------------------contenedores de mision y vision---------------------------------------*/ 
+
+
+.tabs-container {
+    max-width: 370px;                          /* Limita el ancho máximo del contenedor */
+    margin: 60px auto;                         /* Centra verticalmente y deja espacio arriba/abajo */
+    background: rgba(255, 255, 255, 0.4);      /* Fondo blanco semitransparente */
+    border-radius: 16px;                       /* Esquinas redondeadas */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);/* Sombra para dar profundidad */
+    overflow: hidden;                          /* Oculta cualquier desbordamiento interno */
+    position: relative;                        /* Permite posicionar elementos hijos relativamente */
+    border: 1px solid rgba(255, 255, 255, 0.3);/* Borde blanco semitransparente */
+    backdrop-filter: blur(15px);               /* Difumina el fondo detrás del contenedor */
+    -webkit-backdrop-filter: blur(15px);       /* Compatibilidad con WebKit (Safari/Chrome) */
+}
+
+.tabs-header {
+    display: flex;                             /* Organiza las pestañas en fila */
+    border-bottom: 3px solid #f1f1f1;          /* Línea divisoria inferior */
+    background: linear-gradient(to right, #4a90e2, #1c3d73); /* Degradado azul */
+    color: #ffffff;                            /* Texto blanco */
+    font-size: 18px;                           /* Tamaño de letra */
+    text-transform: uppercase;                 /* Letras en mayúsculas */
+    letter-spacing: 1px;                       /* Espaciado entre letras */
+}
+
+.tab {
+    flex: 1;                                   /* Cada tab ocupa el mismo ancho */
+    text-align: center;                        /* Centra el texto */
+    padding: 15px 20px;                        /* Relleno interno */
+    cursor: pointer;                           /* Cursor de mano al pasar */
+    font-weight: 600;                          /* Semi-negritas */
+    transition: background 0.4s, color 0.4s;   /* Transición suave al interactuar */
+    border-right: 1px solid rgba(255, 255, 255, 0.2); /* Separador entre pestañas */
+}
+
+.tab:last-child {
+    border-right: none;                        /* Quita el borde derecho al último tab */
+}
+
+.tab:hover {
+    background: rgba(255, 255, 255, 0.2);      /* Fondo más claro al pasar el mouse */
+}
+
+.tab.active {
+    background: #ffffff;                       /* Fondo blanco para la pestaña activa */
+    color: #4a90e2;                            /* Color de texto azul para la activa */
+    font-weight: bold;                         /* Negritas */
+    border-bottom: 4px solid #4a90e2;          /* Línea inferior destacada */
+    box-shadow: inset 0 -4px 10px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+.tab-content {
+    display: none;                             /* Oculta el contenido por defecto */
+    padding: 40px;                             /* Espacio interior */
+    text-align: center;                        /* Centra el contenido */
+    animation: fadeInUp 0.6s ease forwards;    /* Aplica animación de entrada */
+    min-height: 400px;                         /* Altura mínima */
+}
+
+.tab-content.active {
+    display: block;                            /* Solo el contenido activo se muestra */
+}
+
+.tab-content img {
+    max-width: 85%;                            /* Limita el ancho máximo de la imagen */
+    max-height: 300px;                         /* Limita la altura máxima */
+    margin-bottom: 20px;                       /* Espacio debajo de la imagen */
+    border-radius: 16px;                       /* Esquinas redondeadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    opacity: 0;                                /* Empieza invisible */
+    transform: scale(0.9);                     /* Empieza un poco más pequeña */
+    animation: fadeInImage 0.6s ease forwards 0.3s; /* Animación con retraso */
+}
+
+.tab-content p {
+    font-size: 20px;                           /* Tamaño grande para el texto */
+    line-height: 1.8;                          /* Espaciado de líneas */
+    color: #000000;                            /* Texto negro */
+    margin-top: 20px;                          /* Espacio arriba */
+    opacity: 0;                                /* Empieza invisible */
+    animation: fadeInText 0.6s ease forwards 0.5s; /* Animación con retraso */
+}
+
+/* Animación para mostrar el contenido hacia arriba */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;                            /* Comienza invisible */
+        transform: translateY(30px);           /* Comienza abajo */
+    }
+    to {
+        opacity: 1;                            /* Termina visible */
+        transform: translateY(0);              /* Termina en su lugar */
+    }
+}
+
+/* Animación para mostrar imágenes escalando */
+@keyframes fadeInImage {
+    from {
+        opacity: 0;                            /* Comienza invisible */
+        transform: scale(0.9);                 /* Comienza más pequeña */
+    }
+    to {
+        opacity: 1;                            /* Termina visible */
+        transform: scale(1);                   /* Termina en tamaño real */
+    }
+}
+
+/* Animación para mostrar texto hacia arriba */
+@keyframes fadeInText {
+    from {
+        opacity: 0;                            /* Comienza invisible */
+        transform: translateY(20px);           /* Comienza más abajo */
+    }
+    to {
+        opacity: 1;                            /* Termina visible */
+        transform: translateY(0);              /* Termina en su lugar */
+    }
+}
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+      /*--------------------------------- Contenedor de imagenes / COMPROMISO AMBIENTAL---------------------------------------*/
+
+.container5 {
+    display: flex;                        /* Usa Flexbox para organizar los hijos en fila */
+     align-items: center;               /* Alinea los elementos hijos en la parte superior (inicio) verticalmente */
+    justify-content: space-between;        /* Deja el mayor espacio posible entre los hijos (izquierda y derecha) */
+    max-width: 1200px;                     /* El ancho máximo del contenedor será de 1200px */
+    margin: auto;                          /* Centra el contenedor horizontalmente */
+    padding: 50px 20px;                    /* 50px de espacio arriba y abajo, 20px a los lados */
+    gap: 37px;                             /* Espaciado de 40px entre los hijos directos */
+}
+
+/* COLUMNA IZQUIERDA */
+.left-content {
+    width: 50%;                            /* Ocupa la mitad del contenedor */
+    min-width: 290px;                      /* No puede ser menor a 290px */
+}
+
+.left-content h2 {
+    font-size: 2rem;                       /* Tamaño de fuente grande para el título */
+    color: #233e9a;                        /* Color azul institucional */
+    font-weight: 800;                      /* Texto en negritas (peso fuerte) */
+    margin-bottom: 12px;                   /* Espacio de 12px debajo del título */
+    letter-spacing: -1px;                  /* Espaciado entre letras negativo para más fuerza visual */
+}
+
+/* LÍNEA DE TIEMPO */
+.timeline {
+    margin-top: 24px;                      /* Espacio superior de 24px respecto al título */
+    position: relative;                    /* Para posicionar hijos relativos si es necesario */
+}
+
+/* CADA ÍTEM DE LA LÍNEA DE TIEMPO */
+.timeline-item {
+    display: flex;                         /* Usa Flexbox para organizar el círculo y el texto en una fila */
+    align-items: flex-start;               /* Alinea los elementos al inicio verticalmente */
+    margin-bottom: 32px;                   /* Espacio inferior entre ítems de la línea de tiempo */
+}
+
+/* CÍRCULO CON DISEÑO NUMERADO */
+.circle {
+  width: 9px;                   /* Ancho fijo del círculo (9 píxeles) */
+  height: 9px;                  /* Alto fijo del círculo (9 píxeles), hace un círculo perfecto */
+  margin-right: 8px;            /* Espacio a la derecha del círculo, separa del texto */
+  display: inline-flex;         /* Usa flexbox en línea para alinear contenido dentro del círculo */
+  align-items: center;          /* Centra verticalmente cualquier contenido (texto, icono) dentro del círculo */
+  justify-content: center;      /* Centra horizontalmente el contenido dentro del círculo */
+  border-radius: 50%;           /* Convierte el elemento en un círculo perfecto */
+  background: #111;             /* Color de fondo negro intenso */
+  color: #fff;                  /* Color del texto dentro del círculo (blanco) */
+  font-size: 0.75rem;           /* Tamaño de fuente pequeño (por si hay un número, letra o icono) */
+  font-weight: 600;             /* Peso del texto más grueso (semi-bold) */
+  border: none;                 /* Sin borde visible */
+  box-shadow: none;             /* Sin sombra exterior */
+  padding: 0;                   /* Sin espacio interno extra */
+  transition: transform 0.15s;  /* Suaviza el efecto de transformación al hacer hover */
+  vertical-align: middle;       /* Alinea el círculo verticalmente con el texto circundante */
+  margin-top: 7px;              /* Baja el círculo 7px respecto a su posición normal (lo separa del borde superior) */
+}
+
+.circle:hover {
+  transform: scale(1.18);       /* Hace el círculo un poco más grande cuando pasas el mouse por encima */
+}
+
+
+/* CONTENEDOR DE TEXTO DE LA LÍNEA DE TIEMPO */
+.text {
+    flex: 1 1 0%;                          /* Puede crecer y encoger, base 0 */
+    min-width: 0;                          /* Para evitar problemas de desbordamiento */
+}
+.text h3, .text p {
+    word-break: break-word;                /* Rompe palabras largas que no quepan */
+    white-space: normal;                   /* Permite saltos de línea normales */
+}
+
+/* EFECTO HOVER EN EL CÍRCULO */
+.circle:hover {
+    transform: scale(1.1) rotate(-3deg);   /* Aumenta el tamaño y rota ligeramente */
+    box-shadow: 0 8px 22px rgba(44,62,154,0.18), 0 3px 12px rgba(0,0,0,0.13); /* Sombra suave azul */
+}
+
+/* ANIMACIÓN DE APARICIÓN DEL CÍRCULO (no está activada por defecto, sólo definida) */
+@keyframes popCircle {
+    from { opacity: 0; transform: scale(0.6) translateY(24px);}
+    to   { opacity: 1; transform: scale(1) translateY(0);}
+}
+
+/* ESTILO DEL TÍTULO DEL ITEM DE LA LÍNEA DE TIEMPO */
+.text h3 {
+    margin: 0 0 3px 0;                     /* Sin margen superior, 3px debajo */
+    font-size: 1.13rem;                    /* Tamaño mediano de fuente */
+    color: #233e9a;                        /* Azul institucional */
+    font-weight: 700;                      /* Texto en negrita */
+    letter-spacing: -0.5px;                /* Espaciado negativo entre letras */
+}
+
+/* ESTILO DEL PÁRRAFO DEL ITEM DE LA LÍNEA DE TIEMPO */
+.text p {
+    margin: 0;                             /* Sin márgenes */
+    font-size: 0.99rem;                    /* Tamaño un poco menor que el título */
+    color: #525272;                        /* Gris oscuro */
+    line-height: 1.6;                      /* Espaciado entre líneas */
+    padding-top: 2px;                      /* Un poco de espacio arriba */
+}
+
+/* COLUMNA DERECHA: IMAGEN */
+.right-content {
+    width: 50%;             /* Ocupa la mitad derecha del contenedor principal */
+    min-width: 220px;       /* Nunca será más pequeña que 220px */
+    display: flex;          /* Utiliza Flexbox para alinear hijos */
+    justify-content: center;/* Centra horizontalmente la imagen dentro de la columna */
+    align-items: center;    /* Centra verticalmente la imagen respecto a la altura de la columna */
+    padding-left: 14px;     /* Deja un espacio de 14px a la izquierda de la imagen */
+}
+
+/* IMAGEN DE LA COLUMNA DERECHA */
+.right-content img {
+    padding: 20px;              /* Espacio interior alrededor de la imagen (arriba, abajo, izquierda, derecha) */
+    width: 250px;               /* Ancho fijo de la imagen */
+    height: auto;               /* Altura automática para mantener la proporción */
+    border-radius: 18px;        /* Bordes redondeados en la imagen */
+    border: 2.5px solid #f4f5fc;/* Borde color gris claro */
+    transition: transform 0.22s, box-shadow 0.22s; /* Transición suave para efectos al hacer hover */
+    object-fit: cover;          /* Asegura que la imagen se recorte si es necesario para ajustarse al contenedor */
+    background: transparent;    /* Fondo transparente */
+    padding-top: 30px;          /* Espacio extra arriba de la imagen, empuja la imagen hacia abajo */
+}
+
+
+
+
+/* -------- RESPONSIVE: tablets -------- */
+@media (max-width: 992px) {
+    .container5 {
+        flex-direction: column;            /* Cambia de fila a columna */
+        align-items: center;               /* Centra el contenido */
+        gap: 24px;                         /* Espacio menor entre secciones */
+        padding: 32px 10px;                /* Menos padding */
+    }
+    .left-content, .right-content {
+        width: 100%;                       /* Cada columna ocupa el 100% */
+        min-width: unset;                   /* Quita el min-width fijo */
+        padding-left: 0;                    /* Sin padding a la izquierda */
+    }
+    .right-content {
+        margin-top: 24px;                  /* Espacio arriba en modo columna */
+        justify-content: center;           /* Centra la imagen */
+    }
+    .right-content img {
+        max-width: 95%;                    /* Limita el ancho de la imagen al 95% */
+        border-radius: 13px;               /* Bordes menos redondeados */
+    }
+}
+
+/* -------- RESPONSIVE: móviles -------- */
+@media (max-width: 600px) {
+    .container5 {
+        padding: 18px 2vw;                 /* Menos padding y adaptable al ancho */
+        gap: 16px;                         /* Espacio aún menor entre bloques */
+    }
+    .left-content h2 {
+        font-size: 1.22rem;                /* Título más pequeño */
+    }
+    .right-content img {
+        max-width: 99%;                    /* Imagen casi todo el ancho */
+        border-radius: 9px;                /* Bordes más suaves */
+    }
+    .timeline-item {
+        margin-bottom: 20px;               /* Menos espacio entre ítems */
+    }
+    .circle {
+        width: 9px;                   /* Ancho fijo del círculo (9 píxeles) */
+  height: 9px;
+        font-size: 1rem;                   /* Texto más pequeño */
+        margin-right: 10px;                /* Menos espacio entre círculo y texto */
+    }
+    .text h3 {
+        font-size: 1rem;                   /* Título del item más pequeño */
+    }
+    .text p {
+        font-size: 0.92rem;                /* Párrafo aún más pequeño */
+    }
+}
+
+
+
+/*--------------------------Seccion de Kilometros Recorridos-----------------------------------------*/
+
+
+
+.exp-section-bnw {
+  position: relative;                        /* Permite posicionar hijos de forma absoluta (como el fondo) */
+  overflow: hidden;                          /* Oculta todo lo que se salga de la sección */
+  min-height: 390px;                         /* Altura mínima para asegurar que no quede muy pequeña */
+  display: flex;                             /* Acomoda el contenido en fila (horizontalmente) */
+  align-items: center;                       /* Centra el contenido verticalmente */
+  justify-content: center;                   /* Centra el contenido horizontalmente */
+  background: #fafafb;                       /* Fondo gris casi blanco, minimalista */
+  margin: 90px auto 46px auto;               /* Margen arriba, centrado y margen abajo */
+  padding: 0;                                /* Sin relleno interno extra */
+}
+
+.exp-bg-img {
+  position: absolute;                        /* Se posiciona encima de la sección, cubriéndola toda */
+  inset: 0;                                  /* Estira el fondo a los 4 bordes del contenedor padre */
+  background: url('/Imagenes\ Freji/Fondo-FREJI.jpg') center/cover no-repeat; /* Imagen de fondo, centrada y cubre todo */
+  opacity: 0.15;                             /* Opacidad inicial baja: se ve tenue y elegante */
+  transition: opacity 1.6s cubic-bezier(.77,0,.18,1); /* Transición suave al cambiar opacidad */
+  z-index: 1;                                /* Se coloca detrás del contenido principal */
+  filter: grayscale(1) contrast(1.15) brightness(1.02) blur(0.5px); /* Pone la imagen en blanco/negro, aumenta contraste, la aclara y la difumina */
+  pointer-events: none;                      /* El fondo no bloquea clicks ni interacciones */
+}
+
+.exp-bnw-content {
+  position: relative;                        /* Permite manejar el apilado con z-index */
+  z-index: 2;                                /* Se asegura de estar encima de la imagen de fondo */
+  display: flex;                             /* Contenido principal en fila */
+  align-items: center;                       /* Centra verticalmente */
+  justify-content: space-between;            /* Deja espacio entre los dos bloques principales */
+  max-width: 950px;                          /* No crece más de 950px de ancho */
+  width: 100%;                               /* Ocupa todo el ancho disponible */
+  margin: 0 auto;                            /* Centrado horizontal */
+  padding: 54px 42px 48px 42px;              /* Espaciado interno amplio (arriba, lados, abajo) */
+  background: rgba(255,255,255,0.60);        /* Fondo blanco muy translúcido para dejar ver la imagen */
+  border-radius: 28px;                       /* Esquinas grandes y redondeadas */
+  box-shadow: 0 4px 22px rgba(0,0,0,0.06);   /* Sombra suave y discreta */
+  gap: 50px;                                 /* Espacio entre info y stats */
+  backdrop-filter: blur(2px);                /* Difumina un poco el fondo de atrás para mayor legibilidad */
+}
+
+.exp-info-bnw h2 {
+  font-family: 'Montserrat', Arial, sans-serif; /* Fuente sans-serif, profesional y moderna */
+  font-size: 2.05rem;                       /* Tamaño grande para el título */
+  font-weight: 800;                         /* Negritas marcadas */
+  margin-bottom: 12px;                      /* Espacio debajo del título */
+  color: #181818;                           /* Negro suave para el texto */
+  letter-spacing: -0.7px;                   /* Letras un poco más juntas */
+  line-height: 1.16;                        /* Altura de línea ajustada */
+}
+
+.exp-info-bnw h2 b {
+  font-weight: 900;                         /* Aún más negrita para resaltar */
+  color: #111;                              /* Negro aún más puro para el texto en negritas */
+}
+
+.exp-info-bnw p {
+  font-family: 'Montserrat', Arial, sans-serif; /* Mantiene la misma fuente elegante */
+  font-size: 1.06rem;                       /* Tamaño de letra mediano */
+  color: #232323;                           /* Gris muy oscuro para contraste y lectura */
+  margin: 0;                                /* Sin espacio extra alrededor */
+  line-height: 1.7;                         /* Espaciado cómodo entre líneas */
+  font-weight: 500;                         /* Semi-bold, para destacar sin ser pesado */
+  letter-spacing: 0.01em;                   /* Un poco de espacio entre letras */
+  max-width: 420px;                         /* El párrafo nunca será más ancho que esto */
+}
+
+.exp-stats-bnw {
+  display: flex;                            /* Organiza los elementos en columna */
+  flex-direction: column;                   /* Apila verticalmente */
+  align-items: center;                      /* Centra horizontalmente */
+  background: #181818;                      /* Fondo negro intenso para el bloque de stats */
+  color: #fff;                              /* Texto blanco */
+  border-radius: 17px;                      /* Esquinas redondeadas */
+  padding: 30px 36px 26px 36px;             /* Espaciado interno generoso */
+  min-width: 180px;                         /* No permite que se haga más pequeño de esto */
+  font-family: 'Montserrat', Arial, sans-serif; /* Misma fuente profesional */
+  box-shadow: 0 3px 16px rgba(0,0,0,0.09);  /* Sombra muy sutil para separarlo */
+}
+
+.exp-legend-bnw {
+  font-size: 1.02rem;                       /* Tamaño de texto del “más de” */
+  font-weight: 800;                         /* Negritas */
+  letter-spacing: 1.2px;                    /* Letras separadas, elegante */
+  margin-bottom: 13px;                      /* Espacio debajo de la leyenda */
+  color: #fff;                              /* Siempre blanco */
+}
+
+.exp-legend-bnw b {
+  font-weight: 900;                         /* Aún más negrita */
+  color: #fff;                              /* Blanco puro */
+}
+
+.exp-count-bnw {
+  font-size: 2.3rem;                        /* Texto grande para el número */
+  font-weight: 900;                         /* Muy bold, resalta el conteo */
+  letter-spacing: 1.6px;                    /* Espaciado entre números */
+  display: flex;                            /* Permite alinear “km” al final */
+  align-items: flex-end;                    /* Alinea el texto base abajo */
+  gap: 7px;                                 /* Espacio entre número y unidad */
+}
+
+#km-count {
+  font-variant-numeric: tabular-nums;       /* Los números siempre alineados verticalmente */
+}
+
+
+/*-------------------seccion de abajo , los conteos y logos en negro-------------------------*/
+
+ body {
+      background: var(--main-white);
+      font-family: 'Montserrat', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .kpi-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 44px;
+      padding: 50px 18px 36px 18px;
+      background: var(--main-white);
+      flex-wrap: wrap;
+      border-bottom: 1px solid #e3e3e3;
+    }
+    .kpi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      min-width: 110px;
+      border: none;
+      box-shadow: none;
+      background: none;
+      margin: 0;
+      transition: none;
+    }
+    .kpi-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      border-radius: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
+      transition: none;
+    }
+    .kpi-icon img {
+      width: 100px;
+      height: 100px;
+      filter: grayscale(1) brightness(0.3) contrast(2);
+      display: block;
+    }
+    .kpi-number {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: var(--main-black);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+      min-height: 40px;
+      font-family: inherit;
+      background: none;
+      border: none;
+      text-shadow: none;
+    }
+    .kpi-title {
+      font-size: 1rem;
+      color: var(--accent);
+      text-align: center;
+      line-height: 1.14;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-top: 0;
+      letter-spacing: -0.5px;
+      background: none;
+      border: none;
+      text-shadow: none;
+    }
+    .kpi-title small {
+      font-size: 0.9rem;
+      color: #888;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      display: block;
+      margin-top: 2px;
+      background: none;
+      border: none;
+      text-shadow: none;
+    }
+    @media (max-width: 700px) {
+      .kpi-container {
+        gap: 20px;
+        padding: 24px 4vw 14px 4vw;
+      }
+      .kpi-number {
+        font-size: 1.5rem;
+        min-height: 30px;
+      }
+    }
+    @media (max-width: 480px) {
+      .kpi-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+        padding: 16px 2vw 10px 2vw;
+      }
+      .kpi {
+        min-width: unset;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+      :root {
+      --main-black: #181818;
+      --main-white: #fff;
+      --main-gray: #f4f4f4;
+      --accent: #292929;
+      --border-radius: 1.4rem;
+    }
+
+
+
+@media (max-width: 750px) {
+  .exp-bnw-content {
+    flex-direction: column;                 /* Apila todo en columna en pantallas chicas */
+    gap: 22px;                              /* Menos espacio entre bloques */
+    padding: 32px 8px 26px 8px;             /* Relleno interno reducido */
+  }
+  .exp-info-bnw h2, .exp-info-bnw p {
+    text-align: center;                     /* Centra los textos en móvil */
+  }
+  .exp-stats-bnw {
+    width: 100%;                            /* El bloque stats ocupa todo el ancho */
+    min-width: unset;                       /* Quita el mínimo para mejor adaptación */
+  }
+}
+
+/* Fade-in del fondo al hacer scroll */
+.exp-bg-img.visible {
+  opacity: 0.29;                            /* Más visible al activar la clase “visible” */
+}
+
+
+
+
+.servicios-list {
+  margin: 18px 0 0 0;
+  padding: 0 0 0 18px;
+  list-style: none; /* Quita viñetas default */
+}
+
+.servicios-list li {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 8px;
+  color: #232323;
+  font-size: 1.08rem;
+  font-weight: 500;
+  font-family: 'Montserrat', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.servicios-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 7px;
+  height: 7px;
+  background: #181818;
+  border-radius: 50%;
+  display: block;
+}
+
+
+
+
+
+
+/*--------------------------- FORMULARIO CONTACTANOS------------------------------------- */
+
+/* Contenedor principal del formulario de contacto */
+.container-form {
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 1100px; /* Limita el ancho máximo del formulario */
+    margin: 90px auto 0 auto; /* Centra el formulario y añade margen superior */
+    display: grid; /* Usa grid para el layout interno */
+    grid-template-columns: repeat(2, 1fr); /* Divide el formulario en 2 columnas iguales */
+    gap: 48px 50px; /* Espaciado entre filas y columnas */
+    padding: 40px 24px; /* Relleno interno (arriba/abajo, izquierda/derecha) */
+    background: #fff; /* Fondo blanco */
+    border-radius: 16px; /* Esquinas redondeadas */
+    box-shadow: 0 8px 32px rgba(33,62,154,0.10); /* Sombra suave para dar profundidad */
+}
+
+/* Encabezado del formulario */
+.container-form h2 {
+    margin-bottom: 15px; /* Espacio debajo del título */
+    font-size: 1.7rem; /* Tamaño grande para el título */
+    color: #213e9a; /* Color azul para el texto */
+    font-weight: 700; /* Negritas */
+}
+
+/* Párrafo introductorio dentro del formulario */
+.container-form p {
+    font-size: 1.08rem; /* Tamaño de letra medio */
+    line-height: 1.7; /* Altura de línea amplia para legibilidad */
+    margin-bottom: 30px; /* Espacio debajo del párrafo */
+    color: #555; /* Color gris suave */
+}
+
+/* Enlaces (links) dentro del formulario */
+.container-form a {
+    font-size: 0.7rem; /* Letra pequeña */
+    display: flex; /* Alinea iconos/texto en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    text-decoration: none; /* Elimina el subrayado */
+    margin-bottom: 10px; /* Espacio debajo de cada enlace */
+    color: #213e9a; /* Color azul para enlaces */
+    font-weight: 700; /* Negritas */
+    transition: color 0.25s; /* Transición suave al cambiar color */
+}
+
+/* Estilos para los campos de entrada y textarea del formulario */
+.container-form form .campo, 
+.container-form form textarea {
+    width: 100%; /* Campos ocupan todo el ancho del contenedor */
+    padding: 14px 14px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño de letra estándar */
+    border: 1.5px solid #d2d8f7; /* Borde gris azulado */
+    margin-bottom: 20px; /* Espacio debajo de cada campo */
+    border-radius: 8px; /* Esquinas redondeadas */
+    outline: none; /* Elimina el contorno al hacer focus */
+    background: #f7f9fd; /* Fondo muy claro */
+    transition: border-color 0.25s, box-shadow 0.2s; /* Transición suave al enfocar */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+    color: #222; /* Color del texto */
+}
+
+/* Efecto cuando un input o textarea está enfocado */
+.container-form form .campo:focus,
+.container-form form textarea:focus {
+    border-color: #213e9a; /* Cambia el borde a azul */
+    box-shadow: 0 0 0 2px rgba(33,62,154,0.13); /* Sombra azul suave */
+}
+
+/* Ajustes para el textarea específicamente */
+.container-form form textarea {
+    min-height: 120px; /* Altura mínima */
+    max-height: 180px; /* Altura máxima */
+    resize: vertical; /* Permite ajustar el tamaño solo verticalmente */
+}
+
+/* Botón para enviar el formulario */
+.container-form .btn-enviar {
+    width: 115px; /* Ancho fijo del botón */
+    padding: 13px 0; /* Espaciado vertical dentro del botón */
+    font-size: 0.8rem; /* Letra ligeramente pequeña */
+    border: none; /* Sin borde */
+    background: #213e9a; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border-radius: 12px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-weight: 400; /* Grosor medio */
+    box-shadow: 0 2px 10px rgba(33,62,154,0.05); /* Sombra sutil */
+    transition: background 0.25s, transform 0.15s; /* Transición para hover */
+    letter-spacing: 0.03em; /* Espaciado entre letras */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+.container-form .btn-enviar:hover {
+    background: #142366; /* Cambia a un azul más oscuro */
+    transform: translateY(-2px) scale(1.03); /* Efecto de levantar y agrandar */
+}
+
+/* Estilos responsivos para pantallas pequeñas */
+@media (max-width: 850px) {
+    .container-form {
+        grid-template-columns: 1fr; /* Solo una columna en lugar de dos */
+        padding: 30px 8px; /* Menos padding en pantallas chicas */
+        gap: 32px; /* Reduce el espacio entre elementos */
+    }
+}
+
+
+
+
+
+
+/*------------------------------------- Sección de clientes: Pasarela de logos de cadada cliente --------------------------------------*/
+.clientes-section {
+  width: 100%;                     /* Ocupa todo el ancho disponible */
+  margin: 60px 0 40px 0;           /* Espacio arriba y abajo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;             /* Centra el contenido horizontalmente */
+}
+
+/* Título elegante para la sección */
+.clientes-title {
+  font-family: 'Montserrat', Arial, sans-serif; /* Fuente profesional */
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #343535;                  /* Azul profesional (puedes cambiar) */
+  letter-spacing: 0.02em;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(44,53,142,0.10);
+}
+
+/* Contenedor vertical: líneas y logos */
+.line-section {
+  display: flex;
+  flex-direction: column;          /* Elementos apilados verticalmente */
+  align-items: stretch;
+  width: 100%;
+  gap: 1.3rem;
+}
+
+/* Línea decorativa superior/inferior: NO llega a los extremos */
+.line {
+  width: 90%;                      /* Solo el 90% del ancho */
+  max-width: 1200px;               /* Máximo 1200px de ancho */
+  margin: 0 auto;                  /* Centrada */
+  height: 2px;
+  background: linear-gradient(to right, #ccc, #888, #ccc);
+  border: none;
+}
+
+/* Carrusel de logos */
+.logos2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.7rem;                     /* Espacio entre logos */
+  padding: 0.7rem 1.5rem;
+  background: rgba(255,255,255,0.93);
+  border-radius: 2.1rem;
+  box-shadow: 0 2px 10px rgba(33,62,154,0.06);
+  max-width: 1200px;               /* Máximo igual que las líneas */
+  margin: 0 auto;                  /* Centrado */
+}
+
+/* Logotipos en blanco y negro, estilo elegante */
+.logo2 {
+  height: 54px;                                    /* Altura uniforme */
+  filter: grayscale(1) brightness(1.2) contrast(1.1) drop-shadow(0 2px 4px rgba(0,0,0,0.13));
+  transition: filter 0.25s, transform 0.25s;
+}
+
+/* Efecto hover: más oscuro y agrandado */
+.logo2:hover {
+  transform: scale(1.08);
+  filter: grayscale(1) brightness(0.7) contrast(1.2) drop-shadow(0 4px 12px rgba(0,0,0,0.22));
+}
+
+
+/* Carrusel infinito de logos de clientes */
+/*---------------------------------------*/
+
+/* Contenedor principal del carrusel (oculta el desbordamiento) */
+.logos2-carrusel {
+  overflow: hidden;                         /* Oculta los logos que se salen del área visible */
+  width: 100%;                              /* Ocupa todo el ancho disponible */
+  max-width: 1200px;                        /* Limita el ancho máximo a 1200px */
+  margin: 0 auto;                           /* Centra el carrusel horizontalmente */
+  border-radius: 2.7rem;                    /* Esquinas redondeadas para el fondo */
+  background: rgba(255,255,255,0.93);       /* Fondo blanco casi opaco */
+  box-shadow: 0 2px 10px rgba(33,62,154,0.06); /* Sombra suave para dar profundidad */
+  padding: 0.7rem 0;                        /* Espaciado vertical interno */
+  position: relative;                       /* Contexto para hijos posicionados */
+}
+
+/* Pista interna que contiene todos los logos y se mueve horizontalmente */
+.logos2-track {
+  display: flex;                            /* Acomoda los logos en una sola fila */
+  width: max-content;                       /* El ancho depende del contenido total */
+  animation: scroll-carrusel 23s linear infinite; /* Animación de movimiento horizontal infinito */
+  align-items: center;                      /* Centra verticalmente los logos */
+  gap: 2.4rem;                              /* Espacio entre cada logo */
+}
+
+/* Estilo de cada logo (imagen) */
+.logo2 {
+  height: 54px;                             /* Altura uniforme para todos los logos */
+  filter: grayscale(1) brightness(1.2) contrast(1.1) /* Aplica filtro para look blanco/negro profesional */
+          drop-shadow(0 2px 4px rgba(0,0,0,0.13)); /* Sombra ligera para resaltar */
+  transition: filter 0.25s, transform 0.25s; /* Transición suave para efectos hover */
+}
+
+/* Efecto cuando el mouse pasa sobre un logo */
+.logo2:hover {
+  transform: scale(1.08);                   /* Agranda ligeramente el logo */
+  filter: grayscale(1) brightness(0.7) contrast(1.2) /* Hace el logo más oscuro */
+          drop-shadow(0 4px 12px rgba(0,0,0,0.22)); /* Sombra más pronunciada */
+}
+
+/* Animación clave para el movimiento infinito del carrusel */
+@keyframes scroll-carrusel {
+  0%   { transform: translateX(0); }        /* Al inicio, logos en posición original */
+  100% { transform: translateX(-50%); }     /* Al final, la pista se mueve la mitad de su ancho, reiniciando el ciclo */
+}
+
+
+
+
+/* -------------------------------------MEDIA QUERYS EMPIEZAN AQUI -------------------------------- */
+
+@media (max-width: 600px) {
+  .about-row {
+    flex-direction: column;
+    padding: 12px 3vw;
+    gap: 15px;
+    border-radius: 13px;
+  }
+  .about-img img {
+    width: 98vw;           /* Casi todo el ancho de pantalla */
+    max-width: 340px;      /* No más de 340px */
+    height: auto;
+    border-radius: 18px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 2px 12px rgba(33,62,154,0.09);
+  }
+  .about-text {
+    text-align: center;
+    padding: 0 3vw;
+  }
+}
+@media (max-width: 600px) {
+  .about-row, .about-row.reverse, .about-row2, .mision-row {
+    flex-direction: column;
+    padding: 12px 3vw;
+    gap: 15px;
+    border-radius: 13px;
+  }
+  .about-img img, .about-img2 img, .mision-img img {
+    width: 98vw;
+    max-width: 340px;
+    height: auto;
+    border-radius: 18px;
+    margin: 0 auto;
+    display: block;
+    box-shadow: 0 2px 12px rgba(33,62,154,0.09);
+  }
+  .about-text, .about-text2, .mision-text {
+    text-align: center;
+    padding: 0 3vw;
+  }
+}
+
+
+
+
+/* TABLETS Y LAPTOPS PEQUEÑAS */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .navbar {
+    top: 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgb(33,62,154);
+    border-bottom: 1.5px solid #ccc;
+    box-sizing: border-box;
+    height: auto;
+  }
+  .logo-img1 {
+    max-height: 35px;
+  }
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+    z-index: 1200;
+    background: none;
+    border: none;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: rgb(33,62,154);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.37s cubic-bezier(.77,0,.18,1), opacity 0.23s;
+    z-index: 1200;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links.show {
+    display: flex;
+    max-height: 260px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: max-height 0.42s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.22s;
+  }
+  .nav-links li {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+  }
+  .nav-links a {
+    display: block;
+    width: 100vw;
+    padding: 15px 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08rem;
+    text-decoration: none;
+    letter-spacing: .01em;
+    border-bottom: 1px solid #2742a3;
+    transition: background 0.17s, color 0.17s;
+  }
+  .nav-links a:hover,
+  .nav-links .active {
+    background: rgba(255,255,255,0.12);
+    color: #ffd447;
+  }
+  .top-bar {
+    display: none !important;
+  }
+}
+
+/* TELEFONOS Y TABLETS VERTICALES */
+@media (max-width: 768px) {
+  .navbar {
+    top: 0;
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 18px;
+    background: rgb(33,62,154);
+    border-bottom: 1.5px solid #ccc;
+    box-sizing: border-box;
+    height: 58px;
+    min-height: 50px;
+    overflow: visible;
+  }
+  .logo-img1 {
+    max-height: 28px;
+  }
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    color: white;
+    font-size: 28px;
+    z-index: 1200;
+    background: none;
+    border: none;
+    padding: 8px;
+    margin-left: auto;
+    margin-right: 8px;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: rgb(33,62,154);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.07);
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.37s cubic-bezier(.77,0,.18,1), opacity 0.23s;
+    z-index: 1200;
+    padding: 0;
+    margin: 0;
+  }
+  .nav-links.show {
+    max-height: 260px;
+    opacity: 1;
+    pointer-events: auto;
+    transition: max-height 0.42s cubic-bezier(.68,-0.55,.27,1.55), opacity 0.22s;
+  }
+  .nav-links li {
+    width: 100%;
+    margin: 0;
+    list-style: none;
+  }
+  .nav-links a {
+    display: block;
+    width: 100vw;
+    padding: 15px 0;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.08rem;
+    text-decoration: none;
+    letter-spacing: .01em;
+    border-bottom: 1px solid #2742a3;
+    transition: background 0.17s, color 0.17s;
+  }
+  .nav-links a:hover,
+  .nav-links .active {
+    background: rgba(255,255,255,0.12);
+    color: #ffd447;
+  }
+  .top-bar {
+    display: none !important;
+  }
+  
+}
+
+
+
+
+      </style>
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <!-- Barra superior con número, correo y horario -->
+        <div class="top-bar">
+            <span>800 01 3754</span>
+            <span>recepcion@freji.mx</span>
+            <span>Lunes a viernes: 9 a.m. a 7 p.m.</span>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/FrejiTrasportacionEspecializada/" target="_blank">
+                    <img src="Logos Redes Sociales/Logo-Facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://www.instagram.com/freji_transportes_/" target="_blank">
+                    <img src="Logos Redes Sociales/Logo-Instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://www.tiktok.com/@frejitransportes" target="_blank">
+                    <img src="Logos Redes Sociales/Logo-Footer-Tiktok.png" alt="TikTok" />
+                </a>
+            </div>
+        </div>
+    
+        <!-- Barra de navegación principal -->
+        <nav class="navbar">
+            <div class="logo1">
+                <img src="Logos Freji/NavBar-Logo.png" alt="NavBar-Logo" class="logo-img1">
+            </div>
+    
+            <!-- Menú de hamburguesa -->
+            <div class="navbar" >
+              <div class="logo1">
+                  <img class="logo-img1" src="Logos Freji/NavBar-Logo.png" alt="NavBar-Logo">
+              </div>
+              <!-- Menú de hamburguesa -->
+              <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+              <!-- Menú de navegación -->
+              <ul class="nav-links">
+                  <li><a href="Enmaquetado-productivo.html">Inicio</a></li>
+                  <li><a href="#Servicios">Servicios</a></li>
+                  <li><a href="#Footer">Contacto</a></li>
+                  <li><a href="#">Cotizaciones</a></li>
+                  <li><a href="Bolsa-Trabajo.html">Bolsa de trabajo</a></li>
+                   <li><a href="Bolsa-Trabajo.html">Portal de proveedores</a></li>
+              </ul>
+          </div>
+    
+        </nav>
+    </header>
+    
+    <section>
+        <section class="cover-section" id="cover">
+    <video autoplay muted loop>
+      <source src="Imagenes Freji/Video-FREJI.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
+    <div class="cover-overlay"></div>
+    <div class="cover-content">
+      <h1>Soluciones de Transporte con Compromiso y Excelencia</h1>
+      <p>Llevamos tu confianza, no solo tu carga.</p>
+    </div>
+  </section>
+<!--Sobre Nosotros--> 
+
+<div class="Calltoaction" id = botonwhatsapp >
+   <img src="/Logos Redes Sociales/whatsapp.png" alt="Contacto-Inmediato">
+        
+</div>
+
+
+
+<div class="acercadenosotros">
+  <div class="acercadenosotros-container" id="Nosotros">
+      <div class="acercadenosotros-left">
+          <span class="acercadenosotros-big-number">¿Quienes Somos? </span>
+          <p class="acercadenosotros-years">
+            En FREJI, ofrecemos soluciones de transporte terrestre con compromiso, seguridad y excelencia. Nuestra misión es superar tus expectativas, cuidando cada detalle del servicio y del entorno que compartimos..
+          </p>
+         
+      </div>
+      
+      <!-- Línea divisoria -->
+      <div class="acercadenosotros-divider"></div>
+
+      <div class="acercadenosotros-right">
+          <p class="acercadenosotros-commitment">
+              Estamos <strong>Comprometidos</strong> con el medio ambiente y con la calidad de nuestros servicios.
+          </p>
+      </div>
+  </div>
+</div>
+
+
+<div class="about-bg"></div>
+<section class="about-block">
+  <div class="about-row">
+    <div class="about-img">
+      <img src="Imagenes Freji/Mision-Imagen.jpg" alt="Mision-Imagen">
+    </div>
+    <div class="about-text">
+      <h2>Misión</h2>
+      <p>
+        Brindar servicios de excelencia en transporte terrestre, avalando la calidad total en nuestros servicios nacionales y transnacionales, garantizando el cumplimiento de las expectativas de nuestros clientes, así como el cuidado sustentable del medio ambiente.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="about-block">
+  <div class="about-row reverse">
+    <div class="about-img">
+      <img src="Imagenes Freji/Vision-Imagen.jpg" alt="Vision-Imagen">
+    </div>
+    <div class="about-text">
+      <h2>Visión</h2>
+      <p>
+        Ser líder a nivel nacional, ofreciendo a nuestros clientes la mejor experiencia en nuestro servicio de trasporte terrestre.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="valores-section">
+  <div class="valores-header">
+    <h2>Acerca de nuestros valores</h2>
+    <p>Nuestros valores nos definen y guían cada día en nuestro trabajo. <span>¡Conócelos!</span></p>
+  </div>
+  <div class="card-container"  id="valores-slider">
+    <div class="card">Innovación</div>
+    <div class="card">Compromiso</div>
+    <div class="card">Transparencia</div>
+    <div class="card">Trabajo en equipo</div>
+    <div class="card">Excelencia</div>
+    <div class="card">Responsabilidad</div>
+    <div class="card">Respeto</div>
+    <div class="card">Liderazgo</div>
+    <div class="card">Creatividad</div>
+  </div>
+</section>
+
+
+<section class="minimal-certs-section">
+  <div class="minimal-certs-container">
+    <h2 class="minimal-certs-title">Nuestras Certificaciones</h2>
+    <div class="minimal-certs-cards">
+      <!-- Certificación 1 -->
+      <div class ="minimal-cert-card">
+        <img src="Logos Certificaciones/Ecovadis-Logo.png" alt="Ecovadis-Logo">
+        <div>
+          <h3>Sostenibilidad</h3>
+         
+        </div>
+      </div>
+      <!-- Certificación 2 -->
+      <div class="minimal-cert-card">
+        <img src="Logos Certificaciones/Semarnat-Logo.jpeg" alt="Semarnat-Logo">
+        <div>
+          <h3> Ecoeficiencia</h3>
+         
+        </div>
+      </div>
+      <!-- Certificación 3 -->
+      <div class="minimal-cert-card">
+        <img src="Logos Certificaciones/Sari-Logo.png" alt="Sari-Logo">
+        <div>
+          <h3>Seguridad</h3>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!--------------------------------------------Nuestros servicios-------------------------------------- -->
+      
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+<div class="container5" id="Servicios">
+  <div class="left-content">
+      <h2>Compromiso con el medio ambiente <br></h2>
+      <div class="timeline">
+          <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="text">
+                  <strong><h3>Transporte Seguro</h3></strong>
+                  <p>Garantizamos el traslado de materiales con los más altos estándares de seguridad.</p>
+              </div> 
+          </div>
+          <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="text">
+                  <strong><h3> Manejo de Sustancias Peligrosas</h3></strong>
+                  <p>Nuestros operadores están capacitados para transportar químicos  <br> 
+                    y materiales peligrosos</p>
+              </div>
+          </div>
+          <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="text">
+                  <strong><h3>Compromiso Ambiental</h3></strong>
+                  <p>Utilizamos isotanques especializados para <br>
+                    minimizar el impacto ambiental.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="right-content">
+      <img src="/Logos camiones/Icono_Ambiente.png" width = 150px height="150px">
+  </div>
+</div>
+<div class="container5">
+  <div class="left-content">
+      <h2> Valor en cada kilómetro recorrido.</h2>
+      <div class="timeline">
+          <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="text">
+                  <h3>Inspección y documentación de contenedores</h3>
+                  <p>Verificamos el estado y documentación al recibirlos. </p>
+              </div>
+          </div>
+          <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="text">
+                  <h3>Transporte terrestre especializado</h3>
+                  <p> Movemos contenedores de forma segura y puntual.</p>
+              </div>
+          </div>
+          <div class="timeline-item">
+              <div class="circle"></div>
+              <div class="text">
+                  <h3>Entrega en puerto o destino final</h3>
+                  <p>Llevamos el contenedor a su destino, monitoreado en todo momento.</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="right-content">
+      <img src="Logos camiones/Logo-Carga.png" width = 250px height="250px">
+  </div>
+</div>
+
+<!--------------------------------Seccion de Kilometros recorridos y tipos de servicio ------------------------->
+
+
+<section class="exp-section-bnw">
+  <div class="exp-bg-img"></div>
+  <div class="exp-bnw-content">
+    <div class="exp-info-bnw">
+      <h2>Llevamos <b>más de 20 años</b> en el mercado contigo.</h2>
+      <ul class="servicios-list">
+        <li>Transporte de isotanque</li>
+        <li>Transporte de materiales peligrosos</li>
+        <li>Transporte ligero</li>
+        <li>Transporte Thermo King</li>
+      </ul>
+    </div>
+    <div class="exp-stats-bnw">
+      <span class="exp-legend-bnw"><b>Más de</b></span>
+      <div class="exp-count-bnw"><span id="km-count">1</span> km</div>
+  </div>
+</section>
+
+
+
+<section class="kpi-container">
+    <div class="kpi">
+      <span class="kpi-icon">
+        <img src="/Logos camiones/Logo-Conteo-1.png" alt="Camión 1">
+      </span>
+      <span class="kpi-number" data-goal="1500">0</span>
+      <span class="kpi-title">Embarcadores<br><small>Satisfechos</small></span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-icon">
+        <img src="/Logos camiones/Logo-Conteo-2.png" alt="Camión 2">
+      </span>
+      <span class="kpi-number" data-goal="120">0</span>
+      <span class="kpi-title">Clientes<br><small>Activos</small></span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-icon">
+        <img src="/Logos camiones/Logo-Conteo-3.png" alt="Camión 3">
+      </span>
+      <span class="kpi-number" data-goal="85">0</span>
+      <span class="kpi-title">Rutas<br><small>Operando</small></span>
+    </div>
+    <div class="kpi">
+      <span class="kpi-icon">
+        <img src="/Logos camiones/Logo-Conteo-4.png" alt="Camión 4">
+      </span>
+      <span class="kpi-number" data-goal="23">0</span>
+      <span class="kpi-title">Unidades<br><small>Propias</small></span>
+    </div>
+  </section>
+
+  <!------------------Linea de clientes ------------------------->
+
+
+
+ <div class="clientes-section">
+  <h2 class="clientes-title">Ellos confían en nosotros</h2>
+  <div class="line-section">
+    <div class="line"></div>
+    <div class="logos2-carrusel">
+      <div class="logos2-track">
+        <!-- Logos originales -->
+        <img src="Logos Clientes/Convermex-Logo.webp" alt="Convermex-Logo" class="logo2">
+        <img src="Logos Clientes/Chemours-Logo.png" alt="Chemours-Logo" class="logo2">
+        <img src="Logos Clientes/Herdez-Logo.webp" alt="Herdez-Logo" class="logo2">
+        <img src="Logos Clientes/Axalta-Logo.webp" alt="Axalta-Logo" class="logo2">
+        <img src="Logos Clientes/Alpura-Logo.webp" alt="Alpura-Logo" class="logo2">
+        <img src="Logos Clientes/Syngenta-Logo.webp" alt="Syngenta-Logo" class="logo2">
+        <img src="Logos Clientes/Adama-Logo.svg" alt="Adama-Logo" class="logo2">
+        <img src="Logos Clientes/Brentag-Logo.png" alt="Brentag-Logo" class="logo2">
+        <!-- Duplicados para carrusel infinito -->
+        <img src="Logos Clientes/Convermex-Logo.webp" alt="Convermex-Logo" class="logo2">
+        <img src="Logos Clientes/Chemours-Logo.png" alt="Chemours-Logo" class="logo2">
+        <img src="Logos Clientes/Herdez-Logo.webp" alt="Herdez-Logo" class="logo2">
+        <img src="Logos Clientes/Axalta-Logo.webp" alt="Axalta-Logo" class="logo2">
+        <img src="Logos Clientes/Alpura-Logo.webp" alt="Alpura-Logo" class="logo2">
+        <img src="Logos Clientes/Syngenta-Logo.webp" alt="Syngenta-Logo" class="logo2">
+        <img src="Logos Clientes/Adama-Logo.svg" alt="Adama-Logo" class="logo2">
+        <img src="Logos Clientes/Brentag-Logo.png" alt="Brentag-Logo" class="logo2">
+      </div>
+    </div>
+    <div class="line"></div>
+  </div>
+</div>
+
+
+
+
+    <!--CONTACTANOS -->
+    <div class="container-form">
+      <div class="info-form">
+          <h2>Contáctanos</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui eligendi est voluptates quae ipsam eius, in quasi odio porro aut vel beatae aperiam.</p>
+          
+      </div>
+      <form action="#" method="" autocomplete="off">
+        <input type="text" name="nombre" placeholder="Tu Nombre" class="campo" required>
+        <input type="email" name="email" placeholder="Tu Email" class="campo" required>
+        <textarea name="mensaje" placeholder="Tu Mensaje..." required></textarea>
+        <input type="submit" name="enviar" value="Enviar Mensaje" class="btn-enviar">
+    </form>
+    
+  </div>
+
+            <!--Footer hasta abajo -->
+
+           <footer class="footer" id="Footer">
+  <div class="containerf">
+    <div class="row">
+      <div class="footer-col">
+        <h4>FREJI</h4>
+        <ul>
+          <li><a href="#">Sobre nosotros</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Cobertura</a></li>
+          <li><a href="#">Innovación</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Obtén ayuda</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Tipo de servicios</a></li>
+          <li><a href="testing.html">Únete</a></li>
+          <li><a href="#">Becarios</a></li>
+          <li><a href="#">Lorem</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Síguenos</h4>
+        <div class="social-links">
+          <a href="https://www.instagram.com" target="_blank">
+            <img src="/Logos Redes Sociales/Instagram-Footer-FREJI.png" alt="Instagram">
+          </a>
+          <a href="Logos Redes Sociales/Logo-Tiktok.png" target="_blank">
+            <img src="/Logos Redes Sociales/TIK-TOK-FOOTER-FREJI.png" alt="TikTok">
+          </a>
+          <a href="https://www.facebook.com" target="_blank">
+            <img src="/Logos Redes Sociales/Facebook-Footer-FREJI.png" alt="Facebook">
+          </a>
+        </div>
+      </div>
+</footer>
+
+            
+             
+              <script> 
+// Espera a que todo el DOM esté cargado antes de ejecutar el código
+document.addEventListener("DOMContentLoaded", function () {
+    // Selecciona el botón del menú hamburguesa
+    const menuToggle = document.querySelector(".hamburger-menu");
+    // Selecciona el contenedor de los enlaces de navegación
+    const navLinks = document.querySelector(".nav-links");
+    // Selecciona todos los enlaces individuales dentro del menú
+    const menuItems = document.querySelectorAll(".nav-links li a");
+
+    // Al hacer clic en el botón hamburguesa, alterna la visibilidad del menú
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show"); // Muestra/oculta el menú
+        menuToggle.classList.toggle("active"); // Cambia animación de las barras
+    });
+
+    // Al hacer clic en un enlace del menú, cierra el menú y quita la animación del botón
+    menuItems.forEach(item => {
+        item.addEventListener("click", function () {
+            navLinks.classList.remove("show");      // Oculta el menú
+            menuToggle.classList.remove("active");  // Quita animación
+        });
+    });
+});
+
+// Selecciona todas las pestañas y sus contenidos
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
+
+// Agrega evento a cada pestaña
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        // Quita la clase 'active' de todas las pestañas
+        tabs.forEach(t => t.classList.remove('active'));
+        // Agrega la clase 'active' a la pestaña seleccionada
+        tab.classList.add('active');
+
+        // Oculta todos los contenidos de pestañas con animación
+        contents.forEach(content => {
+            content.classList.remove('active');
+            setTimeout(() => content.style.display = 'none', 300); // Esconde después de 300ms
+        });
+
+        // Muestra el contenido correspondiente a la pestaña seleccionada
+        const target = document.getElementById(tab.dataset.tab);
+        setTimeout(() => {
+            target.style.display = 'block';   // Lo hace visible
+            target.classList.add('active');   // Activa la animación CSS
+        }, 300);
+    });
+});
+
+// Función para animar secciones al hacer scroll
+function handleScrollAnimations() {
+    // Selecciona todas las secciones a animar
+    const sections = document.querySelectorAll('.section');
+    // Define la altura a partir de la cual se activa la animación (80% del viewport)
+    const triggerHeight = window.innerHeight * 0.8;
+
+    // Recorre cada sección y activa la animación si está suficientemente visible
+    sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerHeight) {
+            section.classList.add('active');
+        }
+    });
+}
+
+// Cuando el DOM está listo, anima el contenedor de "acerca de nosotros" al hacer scroll
+document.addEventListener('DOMContentLoaded', function() {
+    const acercaCont = document.querySelector('.acercadenosotros-container');
+
+    // Función para mostrar la sección cuando entra al viewport
+    function mostrarCuandoAparezca() {
+        const rect = acercaCont.getBoundingClientRect();
+        const trigger = window.innerHeight * 0.82; // 82% de la pantalla
+
+        if (rect.top < trigger) {
+            acercaCont.classList.add('active'); // Activa animación
+            window.removeEventListener('scroll', mostrarCuandoAparezca); // Solo una vez
+        }
+    }
+
+    window.addEventListener('scroll', mostrarCuandoAparezca); // Llama en cada scroll
+    mostrarCuandoAparezca(); // Por si ya está visible al cargar
+});
+
+// Escucha el evento de scroll para animar secciones
+window.addEventListener('scroll', handleScrollAnimations);
+
+// Llama la función inicialmente para animar secciones ya visibles
+handleScrollAnimations();
+
+// Ajusta el diseño del footer según el tamaño de la pantalla
+function adjustFooterLayout() {
+    const footerColumns = document.querySelectorAll('.footer-col');
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+
+    if (mediaQuery.matches) {
+        // En pantallas pequeñas, columnas a 100% de ancho y texto a la izquierda
+        footerColumns.forEach(col => {
+            col.style.width = "100%";
+            col.style.textAlign = "left";
+        });
+    } else {
+        // En pantallas grandes, columnas a 30% de ancho
+        footerColumns.forEach(col => {
+            col.style.width = "30%";
+            col.style.textAlign = "left";
+        });
+    }
+}
+
+// Ajusta el footer al cargar la página
+window.addEventListener('load', adjustFooterLayout);
+// Ajusta el footer al cambiar tamaño de pantalla
+window.addEventListener('resize', adjustFooterLayout);
+
+// Anima tarjetas de certificaciones al aparecer en pantalla
+document.addEventListener("DOMContentLoaded", function() {
+    const section = document.querySelector('.minimal-certs-section');
+    const cards = document.querySelectorAll('.minimal-cert-card');
+    let animated = false; // Solo anima una vez
+
+    // Oculta todas las tarjetas inicialmente
+    cards.forEach(card => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(32px)";
+        card.style.transition = "opacity 0.6s, transform 0.7s";
+    });
+
+    // Función para mostrar las tarjetas una por una al hacer scroll
+    function showCardsOnScroll() {
+        const sectionTop = section.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+        if (sectionTop < windowHeight * 0.92 && !animated) {
+            cards.forEach((card, i) => {
+                setTimeout(() => {
+                    card.style.opacity = "1";
+                    card.style.transform = "translateY(0)";
+                }, 1200 * i); // Aparece cada una con retraso incremental
+            });
+            animated = true;
+        }
+    }
+
+    window.addEventListener('scroll', showCardsOnScroll);
+    showCardsOnScroll();
+});
+
+// Ajusta opacidad del fondo .about-bg según el scroll
+const OPACIDAD_MIN = 0.17; // Opacidad mínima
+const OPACIDAD_MAX = 0.55; // Opacidad máxima
+const LIMITE_PIXELES = 480; // Límite de píxeles de scroll
+
+window.addEventListener('scroll', function() {
+    const scrolled = Math.min(window.scrollY, LIMITE_PIXELES);
+    const opacidad = OPACIDAD_MIN + (OPACIDAD_MAX - OPACIDAD_MIN) * (scrolled / LIMITE_PIXELES);
+    document.querySelector('.about-bg').style.opacity = opacidad;
+});
+
+/*-------------------------------------- MISION VISION , CORREDIZO--------------------*/
+// Función para animar los hijos de tab-content (fade-in uno a uno)
+function showTabContent(tabContent) {
+    const children = tabContent.querySelectorAll('.fade-in');
+    children.forEach((el, idx) => {
+        el.classList.remove('visible'); // Oculta primero
+        setTimeout(() => {
+            el.classList.add('visible'); // Muestra con delay incremental
+        }, 300 * idx); // Cada uno después de 300ms más
+    });
+}
+
+// Asocia la animación fade-in a las tabs cuando se cambian
+document.querySelectorAll('.tab').forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab-content').forEach(tc => tc.classList.remove('active'));
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+
+        tab.classList.add('active');
+        const content = document.querySelectorAll('.tab-content')[i];
+        content.classList.add('active');
+        showTabContent(content); // Aplica el fade-in
+    });
+});
+
+// Anima el primer tab al cargar la página
+window.addEventListener('DOMContentLoaded', () => {
+    const first = document.querySelector('.tab-content.active');
+    if (first) showTabContent(first);
+});
+
+// Animación tipo fade-in cuando .about-row aparece en pantalla usando IntersectionObserver
+document.addEventListener("DOMContentLoaded", function() {
+    const aboutRows = document.querySelectorAll('.about-row');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in'); // Muestra el bloque
+                observer.unobserve(entry.target); // Solo una vez por elemento
+            }
+        });
+    }, {
+        threshold: 0.35 // Cuando el 35% sea visible
+    });
+
+    aboutRows.forEach(row => observer.observe(row)); // Observa todos los bloques
+});
+
+
+
+// ----------------------------------------------JAVASCRIPT ANIMACION DE KILOMETROS RECORRIDOS ------------------------//
+// Espera a que toda la página esté cargada antes de ejecutar esto
+document.addEventListener('DOMContentLoaded', function() {
+  // ---- CONTADOR DE KILÓMETROS ----
+  const el = document.getElementById('km-count'); // Selecciona el elemento donde se muestra el número de km
+  let km = 1;                                    // El conteo inicia desde 1 km
+  const target = 4500;                           // Meta final: 4,500 km
+  const speed = 13;                              // Velocidad del conteo (más alto = más lento)
+
+  // Función que hace que el número vaya subiendo de forma animada
+  function countUp() {
+    el.textContent = km.toLocaleString('es-MX'); // Muestra el número formateado (con comas)
+    if (km < target) {                           // Si todavía no llega al objetivo...
+      // Incrementa más rápido al principio y más lento cerca del final
+      km += Math.max(1, Math.floor((target - km) / 37));
+      setTimeout(countUp, speed);                // Vuelve a llamar la función después de un ratito
+    } else {
+      el.textContent = target.toLocaleString('es-MX'); // Se asegura que el último número sí sea el objetivo
+    }
+  }
+
+  // ---- FADE-IN DEL FONDO AL ENTRAR EN PANTALLA ----
+  const section = document.querySelector('.exp-section-bnw'); // Selecciona la sección completa
+  const bg = document.querySelector('.exp-bg-img');           // Selecciona el fondo difuminado
+  let started = false;                                        // Bandera para que esto solo pase una vez
+
+  // Función que verifica si la sección ya está suficientemente visible
+  function checkSection() {
+    const rect = section.getBoundingClientRect();           // Obtiene la posición de la sección en la pantalla
+    const trigger = window.innerHeight * 0.88;              // Cuánto de la pantalla debe verse para disparar el efecto
+
+    if (rect.top < trigger && !started) {                   // Si la sección ya llegó al "umbral" y aún no empezó...
+      bg.classList.add('visible');                          // Aplica la clase para subir opacidad del fondo (fade-in)
+      countUp();                                            // Inicia el conteo animado de km
+      started = true;                                       // Marca como iniciado para que no se repita
+      window.removeEventListener('scroll', checkSection);   // Deja de escuchar el scroll, ya no es necesario
+    }
+  }
+
+  window.addEventListener('scroll', checkSection); // Revisa cada vez que se haga scroll
+  checkSection(); // También revisa de una vez por si la sección ya se ve desde el principio
+});
+
+//-------------------------------- Animacion de PASARELA DE CLIENTES DE FORMA AUTOMATICA EN PANTALLAS PEQUEÑAS-----------------//
+
+document.addEventListener("DOMContentLoaded", function() {
+  const slider = document.getElementById("valores-slider");
+
+  if (!slider) return;
+
+  // Solo activar en pantallas menores a 600px
+  function isMobile() {
+    return window.innerWidth < 600;
+  }
+
+  // Clonar cards para que sea infinito visualmente
+  function cloneCards() {
+    // Si ya clonó, no volver a clonar
+    if (slider.getAttribute('data-cloned')) return;
+    const cards = Array.from(slider.children);
+    cards.forEach(card => {
+      const clone = card.cloneNode(true);
+      clone.classList.add('clone');
+      slider.appendChild(clone);
+    });
+    slider.setAttribute('data-cloned', 'true');
+  }
+
+  let scrollSpeed = 1.2; // píxeles por frame, ajusta la velocidad si quieres
+  let animId;
+
+  function startCarousel() {
+    if (!isMobile()) return;
+    cloneCards();
+    let maxScroll = slider.scrollWidth / 2;
+
+    function animate() {
+      slider.scrollLeft += scrollSpeed;
+      if (slider.scrollLeft >= maxScroll) {
+        slider.scrollLeft = 0;
+      }
+      animId = requestAnimationFrame(animate);
+    }
+    animate();
+  }
+
+  function stopCarousel() {
+    cancelAnimationFrame(animId);
+  }
+
+  // Inicializa o detén según el tamaño
+  function handleResize() {
+    stopCarousel();
+    slider.scrollLeft = 0;
+    if (isMobile()) {
+      startCarousel();
+    } else {
+      // Elimina clones si sales de móvil
+      document.querySelectorAll("#valores-slider .clone").forEach(clone => clone.remove());
+      slider.removeAttribute('data-cloned');
+    }
+  }
+
+  // Reactiva si cambias de tamaño
+  window.addEventListener('resize', handleResize);
+
+  // ¡Arranca!
+  handleResize();
+});
+//----------------boton de whatsappp-----------------
+
+  document.getElementById('botonwhatsapp').onclick = function() {
+    window.open('https://wa.me/521XXXXXXXXXX', '_blank');
+  }
+
+ // -------------------------Animación de conteo completo --------------------------//
+    document.addEventListener("DOMContentLoaded", () => {
+      const numbers = document.querySelectorAll(".kpi-number");
+      function animateSequential(index = 0) {
+        if (index >= numbers.length) return;
+        const el = numbers[index];
+        const goal = parseInt(el.dataset.goal, 10);
+        let current = 0;
+        let increment = Math.ceil(goal / 50);
+        if (goal < 50) increment = 1;
+        function animate() {
+          current += increment;
+          if (current >= goal) current = goal;
+          el.textContent = current.toLocaleString();
+          if (current < goal) {
+            requestAnimationFrame(animate);
+          } else {
+            setTimeout(() => animateSequential(index + 1), 250);
+          }
+        }
+        animate();
+      }
+      animateSequential();
+    });
+  
+    
+                </script>         
+</body>
+</html>
